@@ -5,7 +5,7 @@ im = load_image("data/dog.jpg")
 for row in range(im.h):
     for col in range(im.w):
         set_pixel(im, col, row, 0, 0)
-save_image(im, "dog_no_red")
+save_image(im, "figs/dog_no_red")
 
 # 3. Grayscale image
 im = load_image("data/colorbar.png")
@@ -31,4 +31,10 @@ clamp_image(im)
 hsv_to_rgb(im)
 save_image(im, "dog_saturated")
 
+im = load_image("data/dog.jpg")
+rgb_to_hsv(im)
+scale_image(im, 1, 2)
+clamp_image(im)
+hsv_to_rgb(im)
+save_image(im, "dog_scale_saturated")
 
